@@ -123,12 +123,6 @@ function startChatMode(initialMessage, initialLangCode) {
     const chatContainer = document.createElement('div');
     chatContainer.className = 'chat-container';
 
-    // 0. Instruction Header
-    const instructionHeader = document.createElement('div');
-    instructionHeader.className = 'chat-header';
-    instructionHeader.innerText = "Select the language you want me to translate into, type your text and hit send!";
-    chatContainer.appendChild(instructionHeader);
-
     // 1. Chat History
     const chatHistory = document.createElement('div');
     chatHistory.className = 'chat-history';

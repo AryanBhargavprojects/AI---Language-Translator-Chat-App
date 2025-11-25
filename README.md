@@ -1,19 +1,39 @@
-# Getting Started
-Install the dependencies and run the project
-```
-npm install
-npm start
-```
+# 🦜 PollyGlot - AI Translation & Chat App
 
-Head over to https://vitejs.dev/ to learn more about configuring vite
-## About Scrimba
+Welcome to **PollyGlot**! This isn't just your average translator; it's an AI-powered language companion that lets you translate text and then jump right into a conversation in that language! 🚀
 
-At Scrimba our goal is to create the best possible coding school at the cost of a gym membership! 💜
-If we succeed with this, it will give anyone who wants to become a software developer a realistic shot at succeeding, regardless of where they live and the size of their wallets 🎉
-The Fullstack Developer Path aims to teach you everything you need to become a Junior Developer, or you could take a deep-dive with one of our advanced courses 🚀
+![alt text](image-2.png)
 
-- [Our courses](https://scrimba.com/courses)
-- [The Frontend Career Path](https://scrimba.com/fullstack-path-c0fullstack)
-- [Become a Scrimba Pro member](https://scrimba.com/pricing)
+## ✨ Features
 
-Happy Coding!
+- **Instant Translation**: Translate text into French 🇫🇷, Spanish 🇪🇸, or Japanese 🇯🇵 with a single click.
+- **AI Chat Mode**: After translating, switch to "Chat Mode" to practice your skills with an AI conversation partner.
+- **Smart Context**: The AI remembers your initial translation to kickstart the conversation naturally.
+- **Premium UI**: A sleek, mobile-first dark mode design with neon accents.
+
+![alt text](image-3.png)
+
+## 🛠️ Tech Stack
+
+- **Frontend**: HTML, CSS, Vanilla JavaScript
+- **Build Tool**: Vite
+- **AI Power**: OpenAI API (GPT-4o-mini)
+
+## 🚀 Getting Started
+
+1.  **Clone the repo** and hop into the directory.
+2.  **Install dependencies**:
+    ```bash
+    npm install
+    ```
+3.  **Set up your API Key**:
+    Create a `.env` file in the root and add your OpenAI key:
+    ```env
+    VITE_OPENAI_API_KEY=your_api_key_here
+    ```
+4.  **Run the app**:
+    ```bash
+    npm run dev
+    ```
+
+Happy Coding & Chatting! 💬
