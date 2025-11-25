@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PollyGlot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <main class="app-container">
+        <section class="header-section">
+            <div class="header-content">
+                <img src="assets/parrot.png" alt="PollyGlot Parrot" class="logo-img">
+                <div class="text-content">
+                    <h1 class="app-title">PollyGlot</h1>
+                    <p class="tagline">Perfect Translation Every Time</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="main-card">
+                <div class="input-group">
+                    <label for="text-input" class="section-label">Text to translate 👇</label>
+                    <textarea id="text-input" placeholder="How are you?"></textarea>
+                </div>
+
+                <div class="controls-group">
+                    <p class="section-label">Select language 👇</p>
+                    <div class="language-list">
+                        <label class="lang-option">
+                            <input type="radio" name="language" value="fr">
+                            <span class="lang-name">French</span>
+                            <img src="assets/fr-flag.png" alt="French" class="lang-flag">
+                        </label>
+                        <label class="lang-option">
+                            <input type="radio" name="language" value="es">
+                            <span class="lang-name">Spanish</span>
+                            <img src="assets/sp-flag.png" alt="Spanish" class="lang-flag">
+                        </label>
+                        <label class="lang-option">
+                            <input type="radio" name="language" value="ja">
+                            <span class="lang-name">Japanese</span>
+                            <img src="assets/jpn-flag.png" alt="Japanese" class="lang-flag">
+                        </label>
+                    </div>
+                </div>
+
+                <button id="translate-btn" class="translate-btn">Translate</button>
+            </div>
+
+            <!-- Output area hidden initially -->
+            <div id="output-text" class="output-text" style="display: none;"></div>
+        </section>
+    </main>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>

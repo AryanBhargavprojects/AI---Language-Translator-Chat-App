@@ -1,0 +1,253 @@
+:root {
+    --header-bg: #111111;
+    /* Assuming dark header based on contrast */
+    --content-bg: #FFFFFF;
+    --title-color: #32CD32;
+    --btn-color: #035A9D;
+    --text-dark: #333333;
+    --text-light: #FFFFFF;
+    --font-heading: 'Big Shoulders Display', cursive;
+    --font-body: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    /* Outer background */
+    font-family: var(--font-body);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 390px;
+    height: 780px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* Clip content to rounded corners if we added them, but design seems square-ish or full screen mobile */
+}
+
+/* --- Header Section --- */
+.header-section {
+    /* Takes up roughly top part */
+    background-color: var(--header-bg);
+    background-image: url('assets/worldmap.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--text-light);
+    width: 390px;
+    height: 213px;
+}
+
+/* Overlay to ensure text readability if map is too bright, 
+   though user said "background image: cover css property will do the work" 
+   so keeping it simple but adding slight tint if needed. 
+   For now, trusting the image + color contrast. */
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo-img {
+    width: 94.88px;
+    height: 84.8px;
+}
+
+.app-title {
+    font-family: var(--font-heading);
+    font-size: 43.42px;
+    /* Exact size requested */
+    color: var(--title-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.tagline {
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* --- Content Section --- */
+.content-section {
+    flex: 1;
+    background-color: var(--content-bg);
+    padding: 14px;
+    /* Adjusted to fit the nested container */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main-card {
+    width: 362px;
+    height: 505px;
+    border: 4px solid #252F42;
+    /* Blue border from design */
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #035A9D;
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    /* Fill the container */
+    height: 140px;
+    background-color: #F3F4F6;
+    /* Light gray bg */
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    /* Larger font */
+    color: #1F2937;
+    resize: none;
+    outline: none;
+    font-weight: 500;
+}
+
+textarea::placeholder {
+    color: #4B5563;
+    font-weight: 600;
+}
+
+textarea:focus {
+    border-color: var(--btn-color);
+    background-color: #fff;
+}
+
+.controls-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.language-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #374151;
+}
+
+.lang-option input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D1D5DB;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.lang-option input[type="radio"]:checked {
+    border-color: #035A9D;
+}
+
+.lang-option input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #035A9D;
+    border-radius: 50%;
+}
+
+.lang-flag {
+    width: 32px;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.translate-btn {
+    background-color: var(--btn-color);
+    color: #fff;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+    /* Push to bottom */
+    box-shadow: 0 4px 6px rgba(3, 90, 157, 0.2);
+    transition: background-color 0.2s;
+}
+
+.translate-btn:hover {
+    background-color: #024a82;
+}
+
+/* Hide old elements if they exist */
+#text-input {
+    /* Reset specific ID styles if any */
+    width: 100%;
+    height: 140px;
+}
